@@ -61,6 +61,7 @@ export default function AkunIndex() {
     // ── Flash notification ────────────────────────────────────────────────────
     useEffect(() => {
         if (flash?.success) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setNotification({ type: 'success', message: flash.success });
             const t = setTimeout(() => setNotification(null), 4000);
 
@@ -68,6 +69,7 @@ export default function AkunIndex() {
         }
 
         if (flash?.error) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setNotification({ type: 'error', message: flash.error });
             const t = setTimeout(() => setNotification(null), 4000);
 

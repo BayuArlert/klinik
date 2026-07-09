@@ -1,0 +1,94 @@
+<?php
+
+namespace App\Models;
+
+use Database\Factories\UserFactory;
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Attributes\Hidden;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
+
+/**
+ * @property int $id
+ * @property string $name
+ * @property string $email
+ * @property string $role
+ * @property string|null $nomor_telepon
+ * @property Carbon|null $tanggal_lahir
+ * @property string|null $jenis_kelamin
+ * @property string|null $alamat
+ * @property Carbon|null $email_verified_at
+ * @property string $password
+ * @property string|null $remember_token
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ */
+#[Fillable(['name', 'email', 'password', 'role', 'nomor_telepon', 'tanggal_lahir', 'jenis_kelamin', 'alamat'])]
+#[Hidden(['password', 'remember_token'])]
+class User extends Authenticatable
+{
+    /** @use HasFactory<UserFactory> */
+    use HasFactory, Notifiable;
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'tanggal_lahir' => 'date',
+            'password' => 'hashed',
+        ];
+    }
+
+    /**
+     * Pasien's pendaftaran records.
+     *
+     * @return HasMany<Pendaftaran, $this>
+     */
+    public function pendaftaran(): HasMany
+    {
+        return $this->hasMany(Pendaftaran::class, 'pasien_id');
+    }
+
+    /**
+     * Bidan's jadwal praktik.
+     *
+     * @return HasMany<JadwalPraktik, $this>
+     */
+    public function jadwalPraktik(): HasMany
+    {
+        return $this->hasMany(JadwalPraktik::class, 'bidan_id');
+    }
+
+    /**
+     * Bidan's pemeriksaan records.
+     *
+     * @return HasMany<Pemeriksaan, $this>
+     */
+    public function pemeriksaan(): HasMany
+    {
+        return $this->hasMany(Pemeriksaan::class, 'bidan_id');
+    }
+
+    public function isPasien(): bool
+    {
+        return $this->role === 'pasien';
+    }
+
+    public function isBidan(): bool
+    {
+        return $this->role === 'bidan';
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+}

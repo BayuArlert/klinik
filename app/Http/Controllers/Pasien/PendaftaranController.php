@@ -81,8 +81,11 @@ class PendaftaranController extends Controller
         $nomorUrut = $totalTerdaftar + 1;
         $nomorAntrian = str_pad((string) $nomorUrut, 3, '0', STR_PAD_LEFT);
 
+        /** @var int $pasienId */
+        $pasienId = Auth::id();
+
         Pendaftaran::create([
-            'pasien_id' => Auth::id(),
+            'pasien_id' => $pasienId,
             'jadwal_id' => $validated['jadwal_id'],
             'tanggal_daftar' => $validated['tanggal_daftar'],
             'keluhan' => $validated['keluhan'],
@@ -99,7 +102,10 @@ class PendaftaranController extends Controller
      */
     public function destroy(Pendaftaran $pendaftaran): RedirectResponse
     {
-        if ($pendaftaran->pasien_id !== Auth::id()) {
+        /** @var int $pasienId */
+        $pasienId = Auth::id();
+
+        if ($pendaftaran->pasien_id !== $pasienId) {
             abort(403);
         }
 

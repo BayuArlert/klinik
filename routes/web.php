@@ -19,7 +19,10 @@ use Illuminate\Support\Facades\Route;
 // Root redirect
 Route::get('/', function () {
     if (auth()->check()) {
-        return match (auth()->user()->role) {
+        /** @var \App\Models\User $user */
+        $user = auth()->user();
+
+        return match ($user->role) {
             'admin' => redirect()->route('admin.dashboard'),
             'bidan' => redirect()->route('bidan.dashboard'),
             default => redirect()->route('pasien.dashboard'),

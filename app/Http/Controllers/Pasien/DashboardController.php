@@ -16,6 +16,7 @@ class DashboardController extends Controller
      */
     public function index(Request $request): Response
     {
+        /** @var \App\Models\User $user */
         $user = Auth::user();
 
         $antrianAktif = Pendaftaran::with(['jadwal.bidan'])

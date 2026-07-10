@@ -63,6 +63,11 @@ class LaporanController extends Controller
 
         $callback = function () use ($laporan) {
             $handle = fopen('php://output', 'w');
+
+            if ($handle === false) {
+                return;
+            }
+
             // BOM for Excel UTF-8
             fprintf($handle, chr(0xEF).chr(0xBB).chr(0xBF));
 
@@ -75,7 +80,7 @@ class LaporanController extends Controller
                 fputcsv($handle, [
                     $row->nomor_antrian,
                     $row->tanggal_daftar->format('d/m/Y'),
-                    $row->pasien->name ?? '-',
+                    $row->pasien?->name ?? '-',
                     $row->jadwal?->bidan?->name ?? '-',
                     $row->keluhan,
                     $row->status_label,

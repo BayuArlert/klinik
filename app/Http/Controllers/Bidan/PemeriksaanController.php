@@ -41,9 +41,12 @@ class PemeriksaanController extends Controller
             'resep' => ['nullable', 'string'],
         ]);
 
+        /** @var int $bidanId */
+        $bidanId = Auth::id();
+
         Pemeriksaan::updateOrCreate(
             ['pendaftaran_id' => $pendaftaran->id],
-            array_merge($validated, ['bidan_id' => Auth::id()])
+            array_merge($validated, ['bidan_id' => $bidanId])
         );
 
         $pendaftaran->update(['status' => 'selesai']);

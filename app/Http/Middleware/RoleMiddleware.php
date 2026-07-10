@@ -15,7 +15,10 @@ class RoleMiddleware
      */
     public function handle(Request $request, Closure $next, string ...$roles): Response
     {
-        if (! $request->user() || ! in_array($request->user()->role, $roles)) {
+        /** @var \App\Models\User|null $user */
+        $user = $request->user();
+
+        if (! $user || ! in_array($user->role, $roles)) {
             abort(403, 'Akses tidak diizinkan.');
         }
 

@@ -1,1 +1,0 @@
-Script phpstan analyse handling the types:check event returned with error code 1

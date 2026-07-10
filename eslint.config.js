@@ -110,7 +110,6 @@ export default [
             'vendor',
             'node_modules',
             'public',
-            'fix_routes.cjs',
             'bootstrap/ssr',
             'tailwind.config.js',
             'vite.config.ts',

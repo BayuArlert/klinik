@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Database\Factories\PendaftaranFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -21,7 +22,7 @@ use Illuminate\Support\Carbon;
 #[Fillable(['pasien_id', 'jadwal_id', 'nomor_antrian', 'tanggal_daftar', 'keluhan', 'status'])]
 class Pendaftaran extends Model
 {
-    /** @use HasFactory<\Database\Factories\PendaftaranFactory> */
+    /** @use HasFactory<PendaftaranFactory> */
     use HasFactory;
 
     protected $table = 'pendaftaran';

@@ -80,15 +80,15 @@ class LaporanController extends Controller
                 fputcsv($handle, [
                     $row->nomor_antrian,
                     $row->tanggal_daftar->format('d/m/Y'),
-                    $row->pasien?->name ?? '-',
-                    $row->jadwal?->bidan?->name ?? '-',
+                    $row->pasien->name ?? '-',
+                    $row->jadwal->bidan->name ?? '-',
                     $row->keluhan,
                     $row->status_label,
-                    $row->pemeriksaan?->tekanan_darah ?? '-',
-                    $row->pemeriksaan?->berat_badan ? $row->pemeriksaan->berat_badan.' kg' : '-',
-                    $row->pemeriksaan?->tinggi_badan ? $row->pemeriksaan->tinggi_badan.' cm' : '-',
-                    $row->pemeriksaan?->diagnosa ?? '-',
-                    $row->pemeriksaan?->resep ?? '-',
+                    $row->pemeriksaan->tekanan_darah ?? '-',
+                    $row->pemeriksaan->berat_badan ? $row->pemeriksaan->berat_badan.' kg' : '-',
+                    $row->pemeriksaan->tinggi_badan ? $row->pemeriksaan->tinggi_badan.' cm' : '-',
+                    $row->pemeriksaan->diagnosa ?? '-',
+                    $row->pemeriksaan->resep ?? '-',
                 ]);
             }
 

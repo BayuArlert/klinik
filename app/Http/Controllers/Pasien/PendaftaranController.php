@@ -54,6 +54,7 @@ class PendaftaranController extends Controller
             'keluhan' => ['required', 'string', 'max:1000'],
         ]);
 
+        /** @var \App\Models\JadwalPraktik $jadwal */
         $jadwal = JadwalPraktik::findOrFail($validated['jadwal_id']);
 
         // Check kuota

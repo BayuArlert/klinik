@@ -20,6 +20,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 #[Fillable(['bidan_id', 'hari', 'jam_mulai', 'jam_selesai', 'kuota', 'is_active'])]
 class JadwalPraktik extends Model
 {
+    /** @use HasFactory<\Database\Factories\JadwalPraktikFactory> */
     use HasFactory;
 
     protected $table = 'jadwal_praktik';

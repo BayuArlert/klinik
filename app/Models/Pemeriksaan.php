@@ -23,6 +23,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 #[Fillable(['pendaftaran_id', 'bidan_id', 'tekanan_darah', 'berat_badan', 'tinggi_badan', 'suhu_tubuh', 'nadi', 'catatan', 'diagnosa', 'resep'])]
 class Pemeriksaan extends Model
 {
+    /** @use HasFactory<\Database\Factories\PemeriksaanFactory> */
     use HasFactory;
 
     protected $table = 'pemeriksaan';

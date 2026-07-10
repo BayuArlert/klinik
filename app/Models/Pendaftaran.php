@@ -21,6 +21,7 @@ use Illuminate\Support\Carbon;
 #[Fillable(['pasien_id', 'jadwal_id', 'nomor_antrian', 'tanggal_daftar', 'keluhan', 'status'])]
 class Pendaftaran extends Model
 {
+    /** @use HasFactory<\Database\Factories\PendaftaranFactory> */
     use HasFactory;
 
     protected $table = 'pendaftaran';

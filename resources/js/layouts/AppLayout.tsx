@@ -31,6 +31,8 @@ export default function AppLayout({ children, title }: PropsWithChildren<{ title
     };
 
     const currentMenu = menuItems[auth.user.role as keyof typeof menuItems] || [];
+    const userInitial = auth.user.name?.charAt(0)?.toUpperCase() ?? '?';
+    const roleLabel = auth.user.role.charAt(0).toUpperCase() + auth.user.role.slice(1);
 
     const getIcon = (name: string) => {
         switch (name) {
@@ -48,7 +50,7 @@ export default function AppLayout({ children, title }: PropsWithChildren<{ title
     return (
         <div className="min-h-screen bg-gray-50 flex">
             {/* Sidebar */}
-            <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-teal-900 text-white transition-transform duration-300 ease-in-out md:relative md:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+            <aside className={`fixed inset-y-0 left-0 z-50 flex w-64 flex-col bg-teal-900 text-white transition-transform duration-300 ease-in-out md:relative md:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="flex h-16 items-center px-6 bg-teal-950">
                     <Link href="/" className="flex items-center gap-2">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-500 text-white">
@@ -58,7 +60,7 @@ export default function AppLayout({ children, title }: PropsWithChildren<{ title
                     </Link>
                 </div>
                 
-                <nav className="p-4 space-y-1">
+                <nav className="flex-1 overflow-y-auto p-4 space-y-1">
                     {currentMenu.map((item) => (
                         <Link
                             key={item.name}
@@ -74,6 +76,18 @@ export default function AppLayout({ children, title }: PropsWithChildren<{ title
                         </Link>
                     ))}
                 </nav>
+
+                <div className="border-t border-teal-800 p-4">
+                    <div className="flex items-center gap-3">
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal-700 text-sm font-bold text-white">
+                            {userInitial}
+                        </div>
+                        <div className="min-w-0">
+                            <p className="truncate text-sm font-medium text-white">{auth.user.name}</p>
+                            <p className="truncate text-xs text-teal-300">{roleLabel}</p>
+                        </div>
+                    </div>
+                </div>
             </aside>
 
             {/* Mobile overlay */}
@@ -99,8 +113,16 @@ export default function AppLayout({ children, title }: PropsWithChildren<{ title
                     </div>
                     
                     <div className="flex items-center gap-4">
-                        <div className="text-sm font-medium text-gray-700 hidden sm:block">
-                            {auth.user.name} <span className="text-gray-400 font-normal">({auth.user.role})</span>
+                        <div className="flex items-center gap-2 sm:gap-3">
+                            <div
+                                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-100 text-sm font-bold text-teal-700 sm:hidden"
+                                title={`${auth.user.name} (${auth.user.role})`}
+                            >
+                                {userInitial}
+                            </div>
+                            <div className="text-sm font-medium text-gray-700 hidden sm:block">
+                                {auth.user.name} <span className="text-gray-400 font-normal">({auth.user.role})</span>
+                            </div>
                         </div>
                         <Link 
                             href={logout.url()} 

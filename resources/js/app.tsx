@@ -1,7 +1,7 @@
 import { createInertiaApp } from '@inertiajs/react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Klinik Sehat';
+const appName = import.meta.env.VITE_APP_NAME || 'PRAKTEK BIDAN AYU';
 
 const pages = import.meta.glob('./pages/**/*.tsx');
 

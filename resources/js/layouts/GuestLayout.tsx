@@ -7,8 +7,8 @@ export default function GuestLayout({ children }: PropsWithChildren) {
         <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 pt-6 sm:justify-center sm:pt-0">
             <div>
                 <Link href="/" className="flex items-center gap-3">
-                    <img src="/logo.png" alt="Praktek Bidan Ayu Logo" className="h-16 w-16 object-contain rounded-full shadow-md border-2 border-white" />
-                    <span className="text-3xl font-bold tracking-tight text-teal-700">PRAKTEK BIDAN AYU</span>
+                    <img src="/logo.png" alt="PM Bidan Sri Rahayuningsih Logo" className="h-16 w-16 object-contain rounded-full shadow-md border-2 border-white" />
+                    <span className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-rose-700 leading-tight">PRAKTEK MANDIRI BIDAN<br className="hidden sm:block" /> <span className="text-lg sm:text-xl md:text-2xl">SRI RAHAYUNINGSIH, S.Tr.Keb. Bdn.</span></span>
                 </Link>
             </div>
 

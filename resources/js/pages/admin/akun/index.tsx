@@ -179,7 +179,7 @@ export default function AkunIndex() {
                 <button
                     id="btn-tambah-akun"
                     onClick={openTambah}
-                    className="inline-flex items-center justify-center rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-colors"
+                    className="inline-flex items-center justify-center rounded-lg bg-rose-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-colors"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
                         <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/>
@@ -205,7 +205,7 @@ export default function AkunIndex() {
                                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <div className="flex items-center">
-                                            <div className="h-10 w-10 flex-shrink-0 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-sm">
+                                            <div className="h-10 w-10 flex-shrink-0 rounded-full bg-rose-100 flex items-center justify-center text-rose-700 font-bold text-sm">
                                                 {item.name.charAt(0).toUpperCase()}
                                             </div>
                                             <div className="ml-4">
@@ -430,7 +430,7 @@ export default function AkunIndex() {
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function inputClass(hasError: boolean) {
-    return `block w-full rounded-lg border px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 ${
+    return `block w-full rounded-lg border px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-rose-500 ${
         hasError ? 'border-red-300 bg-red-50' : 'border-gray-300 bg-white'
     }`;
 }
@@ -449,7 +449,7 @@ function BtnPrimary({ children, ...props }: React.ButtonHTMLAttributes<HTMLButto
     return (
         <button
             {...props}
-            className={`inline-flex items-center rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 disabled:opacity-50 transition-colors ${props.className ?? ''}`}
+            className={`inline-flex items-center rounded-lg bg-rose-600 px-4 py-2 text-sm font-medium text-white hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 disabled:opacity-50 transition-colors ${props.className ?? ''}`}
         >
             {children}
         </button>
@@ -460,7 +460,7 @@ function BtnSecondary({ children, ...props }: React.ButtonHTMLAttributes<HTMLBut
     return (
         <button
             {...props}
-            className={`inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-colors ${props.className ?? ''}`}
+            className={`inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 transition-colors ${props.className ?? ''}`}
         >
             {children}
         </button>

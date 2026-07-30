@@ -1,7 +1,7 @@
 import { createInertiaApp } from '@inertiajs/react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 
-const appName = import.meta.env.VITE_APP_NAME || 'PRAKTEK BIDAN AYU';
+const appName = import.meta.env.VITE_APP_NAME || 'PM Bidan Sri Rahayuningsih';
 
 const pages = import.meta.glob('./pages/**/*.tsx');
 
@@ -28,6 +28,6 @@ createInertiaApp({
         }
     },
     progress: {
-        color: '#0d9488',
+        color: '#e47289',
     },
 });

@@ -58,7 +58,7 @@ interface PageProps {
 }
 
 const STATUS_COLOR: Record<string, string> = {
-    selesai:    'bg-teal-100 text-teal-800',
+    selesai:    'bg-rose-100 text-rose-800',
     menunggu:   'bg-yellow-100 text-yellow-800',
     dibatalkan: 'bg-red-100 text-red-800',
     diproses:   'bg-blue-100 text-blue-800',
@@ -114,7 +114,7 @@ export default function LaporanIndex() {
 
             {/* ── Ringkasan statistik ── */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-                <StatCard label="Total Kunjungan" value={ringkasan.total} color="teal" />
+                <StatCard label="Total Kunjungan" value={ringkasan.total} color="rose" />
                 <StatCard label="Selesai" value={ringkasan.selesai} color="green" />
                 <StatCard label="Menunggu" value={ringkasan.menunggu} color="yellow" />
                 <StatCard label="Dibatalkan" value={ringkasan.dibatalkan} color="red" />
@@ -132,7 +132,7 @@ export default function LaporanIndex() {
                                 type="date"
                                 value={tanggalMulai}
                                 onChange={e => setTanggalMulai(e.target.value)}
-                                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                             />
                         </div>
                         <div>
@@ -142,7 +142,7 @@ export default function LaporanIndex() {
                                 type="date"
                                 value={tanggalSelesai}
                                 onChange={e => setTanggalSelesai(e.target.value)}
-                                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                             />
                         </div>
                         <div>
@@ -151,7 +151,7 @@ export default function LaporanIndex() {
                                 id="filter-status"
                                 value={status}
                                 onChange={e => setStatus(e.target.value)}
-                                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                             >
                                 <option value="">Semua Status</option>
                                 <option value="selesai">Selesai</option>
@@ -170,7 +170,7 @@ export default function LaporanIndex() {
                             <a
                                 id="btn-export-csv"
                                 href={exportUrl()}
-                                className="flex-1 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-3 text-sm transition-colors text-center"
+                                className="flex-1 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-medium py-2 px-3 text-sm transition-colors text-center"
                             >
                                 Export CSV
                             </a>
@@ -201,7 +201,7 @@ export default function LaporanIndex() {
                                             day: '2-digit', month: 'short', year: 'numeric',
                                         })}
                                     </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-teal-600">
+                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-rose-600">
                                         {item.nomor_antrian}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
@@ -244,7 +244,7 @@ export default function LaporanIndex() {
                                     onClick={() => link.url && router.get(link.url, {}, { preserveState: true })}
                                     className={`px-3 py-1 rounded-md text-xs font-medium transition-colors ${
                                         link.active
-                                            ? 'bg-teal-600 text-white'
+                                            ? 'bg-rose-600 text-white'
                                             : link.url
                                                 ? 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
                                                 : 'bg-white border border-gray-200 text-gray-300 cursor-default'
@@ -262,10 +262,10 @@ export default function LaporanIndex() {
 
 // ── StatCard ──────────────────────────────────────────────────────────────────
 
-type Color = 'teal' | 'green' | 'yellow' | 'red';
+type Color = 'rose' | 'green' | 'yellow' | 'red';
 
 const colorMap: Record<Color, { bg: string; text: string; num: string }> = {
-    teal:   { bg: 'bg-teal-50',   text: 'text-teal-700',   num: 'text-teal-600' },
+    rose:   { bg: 'bg-rose-50',   text: 'text-rose-700',   num: 'text-rose-600' },
     green:  { bg: 'bg-green-50',  text: 'text-green-700',  num: 'text-green-600' },
     yellow: { bg: 'bg-yellow-50', text: 'text-yellow-700', num: 'text-yellow-600' },
     red:    { bg: 'bg-red-50',    text: 'text-red-700',    num: 'text-red-600' },

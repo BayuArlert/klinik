@@ -78,7 +78,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                             {/* Tanda-tanda Vital */}
                             <div>
                                 <h3 className="text-base font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal-600"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-rose-600"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                                     Tanda-tanda Vital
                                 </h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -89,7 +89,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                                             type="text"
                                             placeholder="120/80"
                                             value={data.tekanan_darah}
-                                            className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-teal-500 focus:ring-teal-500 sm:text-sm"
+                                            className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                                             onChange={(e) => setData('tekanan_darah', e.target.value)}
                                         />
                                         {errors.tekanan_darah && <p className="mt-1 text-xs text-red-600">{errors.tekanan_darah}</p>}
@@ -102,7 +102,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                                             step="0.1"
                                             placeholder="36.5"
                                             value={data.suhu_tubuh}
-                                            className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-teal-500 focus:ring-teal-500 sm:text-sm"
+                                            className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                                             onChange={(e) => setData('suhu_tubuh', e.target.value)}
                                         />
                                     </div>
@@ -113,7 +113,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                                             type="number"
                                             step="0.1"
                                             value={data.berat_badan}
-                                            className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-teal-500 focus:ring-teal-500 sm:text-sm"
+                                            className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                                             onChange={(e) => setData('berat_badan', e.target.value)}
                                         />
                                     </div>
@@ -124,7 +124,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                                             type="number"
                                             step="0.1"
                                             value={data.tinggi_badan}
-                                            className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-teal-500 focus:ring-teal-500 sm:text-sm"
+                                            className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                                             onChange={(e) => setData('tinggi_badan', e.target.value)}
                                         />
                                     </div>
@@ -134,7 +134,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                             {/* Hasil & Diagnosa */}
                             <div>
                                 <h3 className="text-base font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal-600"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-rose-600"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
                                     Hasil Pemeriksaan & Diagnosa
                                 </h3>
                                 <div className="space-y-4">
@@ -144,7 +144,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                                             id="catatan"
                                             rows={3}
                                             value={data.catatan}
-                                            className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-teal-500 focus:ring-teal-500 sm:text-sm"
+                                            className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                                             onChange={(e) => setData('catatan', e.target.value)}
                                         />
                                     </div>
@@ -154,7 +154,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                                             id="diagnosa"
                                             rows={2}
                                             value={data.diagnosa}
-                                            className={`block w-full rounded-md border ${errors.diagnosa ? 'border-red-500' : 'border-gray-300'} px-3 py-2 focus:border-teal-500 focus:ring-teal-500 sm:text-sm bg-teal-50`}
+                                            className={`block w-full rounded-md border ${errors.diagnosa ? 'border-red-500' : 'border-gray-300'} px-3 py-2 focus:border-rose-500 focus:ring-rose-500 sm:text-sm bg-rose-50`}
                                             onChange={(e) => setData('diagnosa', e.target.value)}
                                             required
                                         />
@@ -166,7 +166,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                             {/* Resep */}
                             <div>
                                 <h3 className="text-base font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal-600"><path d="M10.5 20.5A2.5 2.5 0 0 1 8 18v-3h7v3a2.5 2.5 0 0 1-2.5 2.5z"/><path d="M5.5 15h13a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-13a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-rose-600"><path d="M10.5 20.5A2.5 2.5 0 0 1 8 18v-3h7v3a2.5 2.5 0 0 1-2.5 2.5z"/><path d="M5.5 15h13a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-13a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2z"/></svg>
                                     Resep / Tindakan
                                 </h3>
                                 <div>
@@ -175,7 +175,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                                         rows={4}
                                         value={data.resep}
                                         placeholder="Tuliskan resep obat atau tindakan medis..."
-                                        className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-teal-500 focus:ring-teal-500 sm:text-sm"
+                                        className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                                         onChange={(e) => setData('resep', e.target.value)}
                                     />
                                 </div>
@@ -185,7 +185,7 @@ export default function PemeriksaanCreate({ pendaftaran }: any) {
                                 <button
                                     type="submit"
                                     disabled={processing}
-                                    className="inline-flex justify-center rounded-lg bg-teal-600 px-8 py-3 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 disabled:opacity-50"
+                                    className="inline-flex justify-center rounded-lg bg-rose-600 px-8 py-3 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 disabled:opacity-50"
                                 >
                                     {processing ? 'Menyimpan...' : 'Simpan Hasil Pemeriksaan'}
                                 </button>

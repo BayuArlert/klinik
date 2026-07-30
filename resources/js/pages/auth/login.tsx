@@ -57,7 +57,7 @@ email = 'pasien@kliniksehat.com';
                         type="email"
                         name="email"
                         value={data.email}
-                        className={`mt-1 block w-full rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                        className={`mt-1 block w-full rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500`}
                         onChange={(e) => setData('email', e.target.value)}
                         autoComplete="username"
                         required
@@ -72,7 +72,7 @@ email = 'pasien@kliniksehat.com';
                         type="password"
                         name="password"
                         value={data.password}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                         onChange={(e) => setData('password', e.target.value)}
                         autoComplete="current-password"
                         required
@@ -86,7 +86,7 @@ email = 'pasien@kliniksehat.com';
                             name="remember"
                             checked={data.remember}
                             onChange={(e) => setData('remember', e.target.checked)}
-                            className="h-4 w-4 rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                            className="h-4 w-4 rounded border-gray-300 text-rose-600 focus:ring-rose-500"
                         />
                         <span className="ml-2 text-sm text-gray-600">Ingat saya</span>
                     </label>
@@ -95,7 +95,7 @@ email = 'pasien@kliniksehat.com';
                 <button
                     type="submit"
                     disabled={processing}
-                    className="w-full flex justify-center rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 disabled:opacity-50"
+                    className="w-full flex justify-center rounded-md bg-rose-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 disabled:opacity-50"
                 >
                     {processing ? 'Memproses...' : 'Masuk'}
                 </button>
@@ -103,7 +103,7 @@ email = 'pasien@kliniksehat.com';
 
             <div className="mt-6 text-center text-sm">
                 <span className="text-gray-600">Belum punya akun? </span>
-                <Link href={register.url()} className="font-medium text-teal-600 hover:text-teal-500">
+                <Link href={register.url()} className="font-medium text-rose-600 hover:text-rose-500">
                     Daftar sebagai Pasien
                 </Link>
             </div>

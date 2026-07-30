@@ -39,7 +39,7 @@ export default function AntrianIndex({ antrian }: any) {
                             {antrian.length > 0 ? antrian.map((item: any) => (
                                 <tr key={item.id} className={`transition-colors ${item.status === 'dipanggil' ? 'bg-amber-50/30' : 'hover:bg-gray-50'}`}>
                                     <td className="px-6 py-4 whitespace-nowrap text-center">
-                                        <span className={`text-xl font-black ${item.status === 'dipanggil' ? 'text-amber-600' : 'text-teal-600'}`}>
+                                        <span className={`text-xl font-black ${item.status === 'dipanggil' ? 'text-amber-600' : 'text-rose-600'}`}>
                                             {item.nomor_antrian}
                                         </span>
                                     </td>
@@ -56,7 +56,7 @@ export default function AntrianIndex({ antrian }: any) {
                                     <td className="px-6 py-4 whitespace-nowrap text-center">
                                         {item.status === 'menunggu' && <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">Menunggu</span>}
                                         {item.status === 'dipanggil' && <span className="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800 animate-pulse">Dipanggil</span>}
-                                        {item.status === 'selesai' && <span className="inline-flex items-center rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-800">Selesai</span>}
+                                        {item.status === 'selesai' && <span className="inline-flex items-center rounded-full bg-rose-100 px-2.5 py-0.5 text-xs font-medium text-rose-800">Selesai</span>}
                                         {item.status === 'dibatalkan' && <span className="inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800">Dibatalkan</span>}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
@@ -71,7 +71,7 @@ export default function AntrianIndex({ antrian }: any) {
                                         {item.status === 'dipanggil' && (
                                             <Link
                                                 href={bidan.pemeriksaan.create.url(item.id)}
-                                                className="inline-flex items-center rounded-md bg-teal-600 px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-teal-700"
+                                                className="inline-flex items-center rounded-md bg-rose-600 px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-rose-700"
                                             >
                                                 Periksa
                                             </Link>
@@ -79,7 +79,7 @@ export default function AntrianIndex({ antrian }: any) {
                                         {item.status === 'selesai' && (
                                             <Link
                                                 href={bidan.pemeriksaan.show.url(item.id)}
-                                                className="text-teal-600 hover:text-teal-900"
+                                                className="text-rose-600 hover:text-rose-900"
                                             >
                                                 Lihat Hasil
                                             </Link>

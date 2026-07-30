@@ -8,7 +8,7 @@ export default function PendaftaranIndex({ pendaftaran }: any) {
         switch (status) {
             case 'menunggu': return <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">Menunggu</span>;
             case 'dipanggil': return <span className="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">Dipanggil</span>;
-            case 'selesai': return <span className="inline-flex items-center rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-800">Selesai</span>;
+            case 'selesai': return <span className="inline-flex items-center rounded-full bg-rose-100 px-2.5 py-0.5 text-xs font-medium text-rose-800">Selesai</span>;
             case 'dibatalkan': return <span className="inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800">Dibatalkan</span>;
             default: return null;
         }
@@ -25,7 +25,7 @@ export default function PendaftaranIndex({ pendaftaran }: any) {
                 </div>
                 <Link 
                     href={pasien.pendaftaran.create.url()} 
-                    className="inline-flex items-center justify-center rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                    className="inline-flex items-center justify-center rounded-lg bg-rose-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
                     Daftar Baru
@@ -49,7 +49,7 @@ export default function PendaftaranIndex({ pendaftaran }: any) {
                                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <div className="text-sm font-medium text-gray-900">{new Date(item.tanggal_daftar).toLocaleDateString('id-ID')}</div>
-                                        <div className="text-sm text-gray-500">Antrian: <span className="font-bold text-teal-600">{item.nomor_antrian}</span></div>
+                                        <div className="text-sm text-gray-500">Antrian: <span className="font-bold text-rose-600">{item.nomor_antrian}</span></div>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <div className="text-sm text-gray-900">{item.jadwal?.bidan?.name || '-'}</div>

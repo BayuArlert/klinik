@@ -46,7 +46,7 @@ export default function PasienCreate() {
                                     id="name"
                                     name="name"
                                     value={data.name}
-                                    className={`mt-1 block w-full rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                                    className={`mt-1 block w-full rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500`}
                                     onChange={(e) => setData('name', e.target.value)}
                                     required
                                 />
@@ -60,7 +60,7 @@ export default function PasienCreate() {
                                     type="email"
                                     name="email"
                                     value={data.email}
-                                    className={`mt-1 block w-full rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                                    className={`mt-1 block w-full rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500`}
                                     onChange={(e) => setData('email', e.target.value)}
                                     required
                                 />
@@ -76,7 +76,7 @@ export default function PasienCreate() {
                                     type="password"
                                     name="password"
                                     value={data.password}
-                                    className={`mt-1 block w-full rounded-md border ${errors.password ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                                    className={`mt-1 block w-full rounded-md border ${errors.password ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500`}
                                     onChange={(e) => setData('password', e.target.value)}
                                     required
                                 />
@@ -90,7 +90,7 @@ export default function PasienCreate() {
                                     type="password"
                                     name="password_confirmation"
                                     value={data.password_confirmation}
-                                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                                     onChange={(e) => setData('password_confirmation', e.target.value)}
                                     required
                                 />
@@ -107,7 +107,7 @@ export default function PasienCreate() {
                                         id="nomor_telepon"
                                         name="nomor_telepon"
                                         value={data.nomor_telepon}
-                                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                                         onChange={(e) => setData('nomor_telepon', e.target.value)}
                                     />
                                 </div>
@@ -119,7 +119,7 @@ export default function PasienCreate() {
                                         type="date"
                                         name="tanggal_lahir"
                                         value={data.tanggal_lahir}
-                                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                                         onChange={(e) => setData('tanggal_lahir', e.target.value)}
                                     />
                                 </div>
@@ -130,7 +130,7 @@ export default function PasienCreate() {
                                         id="jenis_kelamin"
                                         name="jenis_kelamin"
                                         value={data.jenis_kelamin}
-                                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500 bg-white"
+                                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500 bg-white"
                                         onChange={(e) => setData('jenis_kelamin', e.target.value)}
                                     >
                                         <option value="">-- Pilih --</option>
@@ -147,7 +147,7 @@ export default function PasienCreate() {
                                     name="alamat"
                                     rows={3}
                                     value={data.alamat}
-                                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                                     onChange={(e) => setData('alamat', e.target.value)}
                                 />
                             </div>
@@ -157,7 +157,7 @@ export default function PasienCreate() {
                             <button
                                 type="submit"
                                 disabled={processing}
-                                className="inline-flex justify-center rounded-lg bg-teal-600 px-6 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 disabled:opacity-50"
+                                className="inline-flex justify-center rounded-lg bg-rose-600 px-6 py-2 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 disabled:opacity-50"
                             >
                                 {processing ? 'Menyimpan...' : 'Simpan Pasien'}
                             </button>

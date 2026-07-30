@@ -33,8 +33,8 @@ export default function Dashboard({ stats, pendaftaranTerbaru }: any) {
                 <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
                     <p className="text-sm font-medium text-gray-500 mb-1">Pemeriksaan Selesai</p>
                     <div className="flex items-end justify-between">
-                        <p className="text-3xl font-bold text-teal-600">{stats.pemeriksaanSelesai}</p>
-                        <div className="p-2 bg-teal-50 text-teal-600 rounded-lg">
+                        <p className="text-3xl font-bold text-rose-600">{stats.pemeriksaanSelesai}</p>
+                        <div className="p-2 bg-rose-50 text-rose-600 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ export default function Dashboard({ stats, pendaftaranTerbaru }: any) {
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                         <div className="p-6 border-b border-gray-200 flex justify-between items-center">
                             <h2 className="text-lg font-bold text-gray-900">Pendaftaran Terbaru Hari Ini</h2>
-                            <Link href={admin.pendaftaran.index.url()} className="text-sm font-medium text-teal-600 hover:text-teal-700">Lihat Semua</Link>
+                            <Link href={admin.pendaftaran.index.url()} className="text-sm font-medium text-rose-600 hover:text-rose-700">Lihat Semua</Link>
                         </div>
                         <div className="overflow-x-auto">
                             <table className="min-w-full divide-y divide-gray-200">
@@ -72,7 +72,7 @@ export default function Dashboard({ stats, pendaftaranTerbaru }: any) {
                                 <tbody className="bg-white divide-y divide-gray-200">
                                     {pendaftaranTerbaru.length > 0 ? pendaftaranTerbaru.map((item: any) => (
                                         <tr key={item.id} className="hover:bg-gray-50">
-                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-teal-600">
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-rose-600">
                                                 {item.nomor_antrian}
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
@@ -84,7 +84,7 @@ export default function Dashboard({ stats, pendaftaranTerbaru }: any) {
                                             <td className="px-6 py-4 whitespace-nowrap">
                                                 {item.status === 'menunggu' && <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">Menunggu</span>}
                                                 {item.status === 'dipanggil' && <span className="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">Dipanggil</span>}
-                                                {item.status === 'selesai' && <span className="inline-flex items-center rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-800">Selesai</span>}
+                                                {item.status === 'selesai' && <span className="inline-flex items-center rounded-full bg-rose-100 px-2.5 py-0.5 text-xs font-medium text-rose-800">Selesai</span>}
                                                 {item.status === 'dibatalkan' && <span className="inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800">Dibatalkan</span>}
                                             </td>
                                         </tr>
@@ -109,7 +109,7 @@ export default function Dashboard({ stats, pendaftaranTerbaru }: any) {
                         </div>
                         <div className="p-4 space-y-3">
                             <Link href={admin.pasien.create.url()} className="flex items-center p-3 rounded-lg hover:bg-gray-50 border border-transparent hover:border-gray-200 transition-colors group">
-                                <div className="p-2 bg-teal-50 rounded-lg text-teal-600 group-hover:bg-teal-100 mr-4">
+                                <div className="p-2 bg-rose-50 rounded-lg text-rose-600 group-hover:bg-rose-100 mr-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
                                 </div>
                                 <div>

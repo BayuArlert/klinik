@@ -28,7 +28,7 @@ export default function PemeriksaanShow({ pendaftaran }: any) {
                         <div>
                             <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Informasi Pasien</h3>
                             <div className="flex items-center gap-4">
-                                <div className="h-12 w-12 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-lg">
+                                <div className="h-12 w-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-700 font-bold text-lg">
                                     {pendaftaran.pasien?.name?.charAt(0).toUpperCase()}
                                 </div>
                                 <div>
@@ -90,9 +90,9 @@ export default function PemeriksaanShow({ pendaftaran }: any) {
                                         <p className="text-sm text-gray-800">{pendaftaran.pemeriksaan.catatan}</p>
                                     </div>
                                 )}
-                                <div className="bg-teal-50 border border-teal-100 p-4 rounded-lg">
-                                    <p className="text-xs text-teal-700 font-medium mb-1">Diagnosa Utama</p>
-                                    <p className="text-base font-bold text-teal-900">{pendaftaran.pemeriksaan?.diagnosa}</p>
+                                <div className="bg-rose-50 border border-rose-100 p-4 rounded-lg">
+                                    <p className="text-xs text-rose-700 font-medium mb-1">Diagnosa Utama</p>
+                                    <p className="text-base font-bold text-rose-900">{pendaftaran.pemeriksaan?.diagnosa}</p>
                                 </div>
                             </div>
                         </div>

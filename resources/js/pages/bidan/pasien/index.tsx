@@ -32,7 +32,7 @@ export default function PasienIndex({ pasien }: any) {
                                     <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="flex items-center">
-                                                <div className="h-10 w-10 flex-shrink-0 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold">
+                                                <div className="h-10 w-10 flex-shrink-0 rounded-full bg-rose-100 flex items-center justify-center text-rose-700 font-bold">
                                                     {item.name.charAt(0).toUpperCase()}
                                                 </div>
                                                 <div className="ml-4">
@@ -53,7 +53,7 @@ export default function PasienIndex({ pasien }: any) {
                                             <div className="text-sm text-gray-900 max-w-xs truncate" title={item.alamat}>{item.alamat || '-'}</div>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-center text-sm font-medium text-gray-900">
-                                            <span className="bg-teal-50 text-teal-700 py-1 px-2.5 rounded-full border border-teal-100">{item.pendaftaran_count || 0}</span>
+                                            <span className="bg-rose-50 text-rose-700 py-1 px-2.5 rounded-full border border-rose-100">{item.pendaftaran_count || 0}</span>
                                         </td>
                                     </tr>
                                 );

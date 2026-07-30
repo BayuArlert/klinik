@@ -7,7 +7,7 @@ export default function PendaftaranIndex({ pendaftaran }: any) {
         switch (status) {
             case 'menunggu': return <span className="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">Menunggu</span>;
             case 'dipanggil': return <span className="inline-flex items-center rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">Dipanggil</span>;
-            case 'selesai': return <span className="inline-flex items-center rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-800">Selesai</span>;
+            case 'selesai': return <span className="inline-flex items-center rounded-full bg-rose-100 px-2.5 py-0.5 text-xs font-medium text-rose-800">Selesai</span>;
             case 'dibatalkan': return <span className="inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800">Dibatalkan</span>;
             default: return null;
         }
@@ -28,7 +28,7 @@ export default function PendaftaranIndex({ pendaftaran }: any) {
                 <div className="p-4 border-b border-gray-200 bg-gray-50">
                     <input 
                         type="date" 
-                        className="w-full sm:w-auto rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                        className="w-full sm:w-auto rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                     />
                 </div>
                 <div className="overflow-x-auto">
@@ -47,7 +47,7 @@ export default function PendaftaranIndex({ pendaftaran }: any) {
                                 <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <div className="text-sm font-medium text-gray-900">{new Date(item.tanggal_daftar).toLocaleDateString('id-ID')}</div>
-                                        <div className="text-sm text-gray-500">Antrian: <span className="font-bold text-teal-600">{item.nomor_antrian}</span></div>
+                                        <div className="text-sm text-gray-500">Antrian: <span className="font-bold text-rose-600">{item.nomor_antrian}</span></div>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <div className="text-sm font-medium text-gray-900">{item.pasien?.name}</div>
@@ -60,7 +60,7 @@ export default function PendaftaranIndex({ pendaftaran }: any) {
                                         {getStatusBadge(item.status)}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                        <button className="text-teal-600 hover:text-teal-900">Detail</button>
+                                        <button className="text-rose-600 hover:text-rose-900">Detail</button>
                                     </td>
                                 </tr>
                             )) : (

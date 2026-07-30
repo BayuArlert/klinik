@@ -42,7 +42,7 @@ export default function PendaftaranCreate({ jadwalTersedia }: any) {
                                 type="date"
                                 min={new Date().toISOString().split('T')[0]}
                                 value={data.tanggal_daftar}
-                                className={`block w-full sm:w-1/2 rounded-lg border ${errors.tanggal_daftar ? 'border-red-500' : 'border-gray-300'} px-4 py-3 focus:border-teal-500 focus:ring-teal-500 bg-gray-50`}
+                                className={`block w-full sm:w-1/2 rounded-lg border ${errors.tanggal_daftar ? 'border-red-500' : 'border-gray-300'} px-4 py-3 focus:border-rose-500 focus:ring-rose-500 bg-gray-50`}
                                 onChange={(e) => setData('tanggal_daftar', e.target.value)}
                                 required
                             />
@@ -62,7 +62,7 @@ export default function PendaftaranCreate({ jadwalTersedia }: any) {
                                         <label 
                                             key={jadwal.id} 
                                             className={`relative flex cursor-pointer rounded-lg border p-4 shadow-sm focus:outline-none ${
-                                                isSelected ? 'border-teal-500 bg-teal-50 ring-1 ring-teal-500' : 'border-gray-300 bg-white hover:bg-gray-50'
+                                                isSelected ? 'border-rose-500 bg-rose-50 ring-1 ring-rose-500' : 'border-gray-300 bg-white hover:bg-gray-50'
                                             }`}
                                         >
                                             <input
@@ -81,7 +81,7 @@ export default function PendaftaranCreate({ jadwalTersedia }: any) {
                                                     </span>
                                                 </span>
                                             </span>
-                                            <svg className={`h-5 w-5 ${isSelected ? 'text-teal-600' : 'hidden'}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <svg className={`h-5 w-5 ${isSelected ? 'text-rose-600' : 'hidden'}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                                             </svg>
                                         </label>
@@ -103,7 +103,7 @@ export default function PendaftaranCreate({ jadwalTersedia }: any) {
                                 rows={4}
                                 value={data.keluhan}
                                 placeholder="Jelaskan keluhan yang Anda rasakan secara singkat..."
-                                className={`block w-full rounded-lg border ${errors.keluhan ? 'border-red-500' : 'border-gray-300'} px-4 py-3 focus:border-teal-500 focus:ring-teal-500`}
+                                className={`block w-full rounded-lg border ${errors.keluhan ? 'border-red-500' : 'border-gray-300'} px-4 py-3 focus:border-rose-500 focus:ring-rose-500`}
                                 onChange={(e) => setData('keluhan', e.target.value)}
                                 required
                             />
@@ -114,7 +114,7 @@ export default function PendaftaranCreate({ jadwalTersedia }: any) {
                             <button
                                 type="submit"
                                 disabled={processing || !data.jadwal_id}
-                                className="inline-flex justify-center rounded-lg bg-teal-600 px-8 py-3 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 disabled:opacity-50"
+                                className="inline-flex justify-center rounded-lg bg-rose-600 px-8 py-3 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 disabled:opacity-50"
                             >
                                 {processing ? 'Memproses...' : 'Daftar Sekarang'}
                             </button>

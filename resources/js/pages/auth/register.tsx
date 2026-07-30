@@ -38,7 +38,7 @@ export default function Register() {
                         id="name"
                         name="name"
                         value={data.name}
-                        className={`mt-1 block w-full rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                        className={`mt-1 block w-full rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500`}
                         onChange={(e) => setData('name', e.target.value)}
                         required
                     />
@@ -52,7 +52,7 @@ export default function Register() {
                         type="email"
                         name="email"
                         value={data.email}
-                        className={`mt-1 block w-full rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                        className={`mt-1 block w-full rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500`}
                         onChange={(e) => setData('email', e.target.value)}
                         required
                     />
@@ -67,7 +67,7 @@ export default function Register() {
                             type="password"
                             name="password"
                             value={data.password}
-                            className={`mt-1 block w-full rounded-md border ${errors.password ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500`}
+                            className={`mt-1 block w-full rounded-md border ${errors.password ? 'border-red-500' : 'border-gray-300'} px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500`}
                             onChange={(e) => setData('password', e.target.value)}
                             required
                         />
@@ -81,7 +81,7 @@ export default function Register() {
                             type="password"
                             name="password_confirmation"
                             value={data.password_confirmation}
-                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                             onChange={(e) => setData('password_confirmation', e.target.value)}
                             required
                         />
@@ -95,7 +95,7 @@ export default function Register() {
                             id="nomor_telepon"
                             name="nomor_telepon"
                             value={data.nomor_telepon}
-                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                             onChange={(e) => setData('nomor_telepon', e.target.value)}
                         />
                     </div>
@@ -107,7 +107,7 @@ export default function Register() {
                             type="date"
                             name="tanggal_lahir"
                             value={data.tanggal_lahir}
-                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                             onChange={(e) => setData('tanggal_lahir', e.target.value)}
                         />
                     </div>
@@ -119,7 +119,7 @@ export default function Register() {
                         id="jenis_kelamin"
                         name="jenis_kelamin"
                         value={data.jenis_kelamin}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500 bg-white"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500 bg-white"
                         onChange={(e) => setData('jenis_kelamin', e.target.value)}
                     >
                         <option value="">-- Pilih --</option>
@@ -135,7 +135,7 @@ export default function Register() {
                         name="alamat"
                         rows={2}
                         value={data.alamat}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                         onChange={(e) => setData('alamat', e.target.value)}
                     />
                 </div>
@@ -143,7 +143,7 @@ export default function Register() {
                 <button
                     type="submit"
                     disabled={processing}
-                    className="w-full flex justify-center rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 disabled:opacity-50 mt-4"
+                    className="w-full flex justify-center rounded-md bg-rose-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 disabled:opacity-50 mt-4"
                 >
                     {processing ? 'Memproses...' : 'Daftar Sekarang'}
                 </button>
@@ -151,7 +151,7 @@ export default function Register() {
 
             <div className="mt-6 text-center text-sm">
                 <span className="text-gray-600">Sudah punya akun? </span>
-                <Link href={login.url()} className="font-medium text-teal-600 hover:text-teal-500">
+                <Link href={login.url()} className="font-medium text-rose-600 hover:text-rose-500">
                     Masuk di sini
                 </Link>
             </div>

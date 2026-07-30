@@ -9,17 +9,29 @@
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
 
-    --color-primary-50: #f0fdfa;
-    --color-primary-100: #ccfbf1;
-    --color-primary-200: #99f6e4;
-    --color-primary-300: #5eead4;
-    --color-primary-400: #2dd4bf;
-    --color-primary-500: #14b8a6;
-    --color-primary-600: #0d9488;
-    --color-primary-700: #0f766e;
-    --color-primary-800: #115e59;
-    --color-primary-900: #134e4a;
-    --color-primary-950: #042f2e;
+    --color-primary-50: #fef4f6;
+    --color-primary-100: #f9dde4;
+    --color-primary-200: #f4cbc7;
+    --color-primary-300: #eb94a3;
+    --color-primary-400: #e47289;
+    --color-primary-500: #e47289;
+    --color-primary-600: #e47289;
+    --color-primary-700: #d45a75;
+    --color-primary-800: #c44a68;
+    --color-primary-900: #e47289;
+    --color-primary-950: #d45a75;
+
+    --color-rose-50: #fef4f6;
+    --color-rose-100: #f9dde4;
+    --color-rose-200: #f4cbc7;
+    --color-rose-300: #eb94a3;
+    --color-rose-400: #e47289;
+    --color-rose-500: #e47289;
+    --color-rose-600: #e47289;
+    --color-rose-700: #d45a75;
+    --color-rose-800: #c44a68;
+    --color-rose-900: #e47289;
+    --color-rose-950: #d45a75;
 
     --color-secondary-50: #f0f9ff;
     --color-secondary-100: #e0f2fe;

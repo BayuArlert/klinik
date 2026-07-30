@@ -10,7 +10,7 @@ export default function Dashboard({ totalPasienHariIni, antrianMenunggu, pemerik
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm flex items-center gap-4">
-                    <div className="p-3 bg-teal-50 rounded-lg text-teal-600">
+                    <div className="p-3 bg-rose-50 rounded-lg text-rose-600">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
                     <div>
@@ -43,7 +43,7 @@ export default function Dashboard({ totalPasienHariIni, antrianMenunggu, pemerik
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                 <div className="p-6 border-b border-gray-200 flex justify-between items-center bg-gray-50">
                     <h2 className="text-lg font-bold text-gray-900">Antrian Terbaru (Menunggu & Dipanggil)</h2>
-                    <Link href={bidan.antrian.index.url()} className="text-sm font-medium text-teal-600 hover:text-teal-700">Kelola Antrian</Link>
+                    <Link href={bidan.antrian.index.url()} className="text-sm font-medium text-rose-600 hover:text-rose-700">Kelola Antrian</Link>
                 </div>
                 
                 <div className="overflow-x-auto">
@@ -59,7 +59,7 @@ export default function Dashboard({ totalPasienHariIni, antrianMenunggu, pemerik
                         <tbody className="bg-white divide-y divide-gray-200">
                             {antrianTerbaru.length > 0 ? antrianTerbaru.map((item: any) => (
                                 <tr key={item.id} className="hover:bg-gray-50">
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-teal-600">
+                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-rose-600">
                                         {item.nomor_antrian}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">

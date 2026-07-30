@@ -23,7 +23,7 @@ export default function PasienIndex({ pasien }: any) {
                 </div>
                 <Link 
                     href={admin.pasien.create.url()} 
-                    className="inline-flex items-center justify-center rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                    className="inline-flex items-center justify-center rounded-lg bg-rose-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
                     Tambah Pasien
@@ -35,7 +35,7 @@ export default function PasienIndex({ pasien }: any) {
                     <input 
                         type="text" 
                         placeholder="Cari nama pasien atau NIK..." 
-                        className="w-full sm:w-1/3 rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+                        className="w-full sm:w-1/3 rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-rose-500 focus:outline-none focus:ring-1 focus:ring-rose-500"
                     />
                 </div>
                 <div className="overflow-x-auto">
@@ -57,7 +57,7 @@ export default function PasienIndex({ pasien }: any) {
                                     <tr key={item.id} className="hover:bg-gray-50 transition-colors">
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="flex items-center">
-                                                <div className="h-10 w-10 flex-shrink-0 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold">
+                                                <div className="h-10 w-10 flex-shrink-0 rounded-full bg-rose-100 flex items-center justify-center text-rose-700 font-bold">
                                                     {item.name.charAt(0).toUpperCase()}
                                                 </div>
                                                 <div className="ml-4">

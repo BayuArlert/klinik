@@ -50,11 +50,15 @@ export default function AppLayout({ children, title }: PropsWithChildren<{ title
     return (
         <div className="min-h-screen bg-gray-50 flex">
             {/* Sidebar */}
-            <aside className={`fixed inset-y-0 left-0 z-50 flex w-64 flex-col bg-teal-900 text-white transition-transform duration-300 ease-in-out md:relative md:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-                <div className="flex h-16 items-center px-6 bg-teal-950">
+            <aside className={`fixed inset-y-0 left-0 z-50 flex w-64 flex-col bg-rose-900 text-white transition-transform duration-300 ease-in-out md:relative md:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+                <div className="flex items-center px-4 py-3 bg-rose-950">
                     <Link href="/" className="flex items-center gap-2">
-                        <img src="/logo.png" alt="Praktek Bidan Ayu Logo" className="h-10 w-10 object-contain rounded-full border-2 border-white shadow-sm" />
-                        <span className="text-lg font-bold tracking-wide">PRAKTEK BIDAN AYU</span>
+                        <img src="/logo.png" alt="PM Bidan Sri Rahayuningsih Logo" className="h-10 w-10 shrink-0 object-contain rounded-full border-2 border-white shadow-sm" />
+                        <div className="min-w-0 leading-tight">
+                            <span className="block text-[11px] font-semibold tracking-wide text-rose-200">Praktek Mandiri Bidan</span>
+                            <span className="block text-sm font-bold tracking-wide leading-tight">Sri Rahayuningsih</span>
+                            <span className="block text-[10px] text-rose-300">S.Tr.Keb. Bdn.</span>
+                        </div>
                     </Link>
                 </div>
                 
@@ -65,8 +69,8 @@ export default function AppLayout({ children, title }: PropsWithChildren<{ title
                             href={item.href}
                             className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
                                 window.location.pathname.startsWith(new URL(item.href, window.location.origin).pathname) 
-                                    ? 'bg-teal-800 text-white' 
-                                    : 'text-teal-100 hover:bg-teal-800/50 hover:text-white'
+                                    ? 'bg-rose-800 text-white' 
+                                    : 'text-rose-100 hover:bg-rose-800/50 hover:text-white'
                             }`}
                         >
                             {getIcon(item.icon)}
@@ -75,14 +79,14 @@ export default function AppLayout({ children, title }: PropsWithChildren<{ title
                     ))}
                 </nav>
 
-                <div className="border-t border-teal-800 p-4">
+                <div className="border-t border-rose-800 p-4">
                     <div className="flex items-center gap-3">
-                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal-700 text-sm font-bold text-white">
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-700 text-sm font-bold text-white">
                             {userInitial}
                         </div>
                         <div className="min-w-0">
                             <p className="truncate text-sm font-medium text-white">{auth.user.name}</p>
-                            <p className="truncate text-xs text-teal-300">{roleLabel}</p>
+                            <p className="truncate text-xs text-rose-300">{roleLabel}</p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +117,7 @@ export default function AppLayout({ children, title }: PropsWithChildren<{ title
                     <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2 sm:gap-3">
                             <div
-                                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-100 text-sm font-bold text-teal-700 sm:hidden"
+                                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-rose-100 text-sm font-bold text-rose-700 sm:hidden"
                                 title={`${auth.user.name} (${auth.user.role})`}
                             >
                                 {userInitial}

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\JadwalController;
 use App\Http\Controllers\Admin\LaporanController;
 use App\Http\Controllers\Admin\PasienController as AdminPasienController;
 use App\Http\Controllers\Admin\PendaftaranController as AdminPendaftaranController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Bidan\AntrianController;
@@ -14,12 +15,13 @@ use App\Http\Controllers\Bidan\PasienController as BidanPasienController;
 use App\Http\Controllers\Bidan\PemeriksaanController;
 use App\Http\Controllers\Pasien\DashboardController as PasienDashboardController;
 use App\Http\Controllers\Pasien\PendaftaranController as PasienPendaftaranController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 // Root redirect
 Route::get('/', function () {
     if (auth()->check()) {
-        /** @var \App\Models\User $user */
+        /** @var User $user */
         $user = auth()->user();
 
         return match ($user->role) {
@@ -39,6 +41,9 @@ Route::middleware('guest')->group(function () {
 
     Route::get('/register', [RegisterController::class, 'create'])->name('register');
     Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+    Route::get('/forgot-password', [ForgotPasswordController::class, 'create'])->name('password.request');
+    Route::post('/forgot-password', [ForgotPasswordController::class, 'store'])->name('password.update.direct');
 });
 
 // ─── Logout ───────────────────────────────────────────────────

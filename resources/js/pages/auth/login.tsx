@@ -5,7 +5,7 @@ import { register } from '@/routes';
 import { store as loginStore } from '@/routes/login';
 import GuestLayout from '../../layouts/GuestLayout';
 
-export default function Login() {
+export default function Login({ status }: { status?: string }) {
     const { data, setData, post, processing, errors } = useForm({
         email: '',
         password: '',
@@ -22,17 +22,17 @@ export default function Login() {
         let email = '';
 
         if (role === 'admin') {
-email = 'admin@kliniksehat.com';
-}
+            email = 'admin@kliniksehat.com';
+        }
 
         if (role === 'bidan') {
-email = 'bidan.sari@kliniksehat.com';
-}
+            email = 'bidan.sari@kliniksehat.com';
+        }
 
         if (role === 'pasien') {
-email = 'pasien@kliniksehat.com';
-}
-        
+            email = 'pasien@kliniksehat.com';
+        }
+
         setData({
             ...data,
             email,
@@ -48,6 +48,12 @@ email = 'pasien@kliniksehat.com';
                 <h2 className="text-2xl font-bold text-gray-900">Selamat Datang</h2>
                 <p className="mt-1 text-sm text-gray-500">Silakan masuk ke akun Anda</p>
             </div>
+
+            {status && (
+                <div className="mb-4 rounded-md bg-emerald-50 p-3 text-sm font-medium text-emerald-700 border border-emerald-200 text-center">
+                    {status}
+                </div>
+            )}
 
             <form onSubmit={submit} className="space-y-4">
                 <div>
@@ -90,6 +96,13 @@ email = 'pasien@kliniksehat.com';
                         />
                         <span className="ml-2 text-sm text-gray-600">Ingat saya</span>
                     </label>
+
+                    <Link
+                        href="/forgot-password"
+                        className="text-sm font-medium text-rose-600 hover:text-rose-500"
+                    >
+                        Lupa password?
+                    </Link>
                 </div>
 
                 <button
